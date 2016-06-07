@@ -1,0 +1,32 @@
+    <div class="ngdialog-message">
+        <div class="">
+            <h3>Please enter username and password: </h3>
+        </div>
+        <div class="">&nbsp;</div>
+        <div class="">
+            <form ng-submit="doLogin()">
+                <div class="form-group">
+                    <label class="sr-only" for="username">Username</label>
+                    <input type="text" class="form-control input-sm" id="username" placeholder="Username" ng-model="loginData.username">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="password">Password</label>
+                    <input type="password" class="form-control input-sm" id="password" placeholder="Password" ng-model="loginData.password">
+                </div>
+                
+                <button type="submit" class="btn btn-info btn-block">Sign in</button>
+                <!--
+                <center>
+                     <a ng-click="openRegister();closeThisDialog()">Don't have account?</a>
+                </center>
+                -->
+               
+                <!--
+                <button type="button" class="btn btn-link" ng-click=closeThisDialog("Cancel")> Cancel</button> &nbsp; &nbsp;
+                -->
+            </form>
+        </div>
+        <div>
+
+        </div>
+    </div>

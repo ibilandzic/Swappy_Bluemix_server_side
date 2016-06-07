@@ -1,0 +1,52 @@
+<div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   <li class="active">Boys</li>
+               </ul>
+            </div>
+            <div class="col-xs-12">
+               <h3>Boys</h3>
+               <hr>
+            </div>
+        </div>
+        <div class="row row-content">
+            <div class="col-xs-12" ng-if="!showItem">
+                <h3>{{message}}</h3>
+            </div>
+            
+            <div ng-if="showItem">
+                <!-- new stuff -->
+            <div ng-repeat="item in items" class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="card card-block">
+                    <!--
+                    <img class="media-object img-thumbnail" ng-src={{item.image}} alt="{{item.name}}">
+                    -->
+                    
+                      <h4 class="card-title">{{item.name}}</h4>
+                      <p class="card-text">Description: {{item.descr}}</p>
+                      <p class="card-text">Type: {{item.type}}</p>
+                      <p class="card-text">Size: {{item.size}}</p>
+                      <p class="card-text">State: {{item.state}}</p>
+                      <p class="card-text">Category: {{item.category}}</p>
+                      <p class="card-text" >Contact: {{item.contact}}</p>
+                      <div class="extra content">
+                        <a ng-click="addToFavorites(item.id)">
+                       <span class="glyphicon glyphicon-heart-empty"></span>
+                        </a>
+                        <a ng-click="sendMail(item.contact,item.name,item.name)">
+                       <span class="glyphicon glyphicon-envelope"></span>
+                        </a>
+                       </div>
+                      
+                    
+                </div>
+                
+            </div> 
+        </div>
+            
+           
+        </div>
+
+</div>

@@ -1,0 +1,25 @@
+{
+  "name": "favorites",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+      "accounts": {
+        "type": "belongsTo",
+        "model": "accounts",
+        "foreignKey": "accountId"
+      },
+      "item": {
+      "type": "belongsTo",
+      "model": "item",
+      "foreignKey": ""
+    }
+    
+  },
+  "acls": [],
+  "methods": {}
+}

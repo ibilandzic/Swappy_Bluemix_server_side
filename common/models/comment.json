@@ -1,0 +1,40 @@
+{
+  "name": "comment",
+  "plural": "comments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "postedBy": {
+      "type": "string",
+      "required": true
+    },
+    "comment": {
+      "type": "string",
+      "required": true
+    },
+    "rating": {
+      "type": "number",
+      "required": true,
+      "default": "5"
+    }
+  },
+  "validations": [],
+  "relations": {
+     "item": {
+      "type": "belongsTo",
+      "model": "item",
+      "foreignKey": "itemId"
+    },
+    "account": {
+      "type": "belongsTo",
+      "model": "account",
+      "foreignKey": "accountId"
+    }
+  },
+  "acls": []
+,
+  "methods": {}
+}

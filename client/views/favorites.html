@@ -1,0 +1,48 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   <li class="active">Favorites</li>
+               </ul>
+            </div>
+            <div class="col-xs-12">
+               <h3>My Favorites</h3>
+               <hr>
+            </div>
+        </div>
+        <div class="row row-content">
+            <div class="col-xs-12" ng-if="!showFavorites">
+                <h3>{{message}}</h3>
+            </div>
+            <div  ng-if="showFavorites">
+                <!-- list of favorite items -->
+                <div ng-repeat="favorite in favorites" class="col-xs-12 col-sm-6 col-lg-4">
+                    <div class="card card-block">
+                        <h4 class="card-title">{{favorite.item.name}}</h4>
+                        <p class="card-text">Description: {{favorite.item.descr}}</p>
+                        <p class="card-text">Size: {{favorite.item.size}}</p>
+                        <p class="card-text">Type: {{favorite.item.type}}</p>
+                        <p class="card-text">State: {{favorite.item.state}}</p>
+                        <p class="card-text">Category: {{favorite.item.category}}</p>
+                        <p class="card-text" >Contact: {{favorite.item.contact}}</p>
+                        <div class="extra content">
+                            <a ng-click="deleteFavorite(favorite.id)">
+                               <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <a ng-click="sendMail(favorite.item.contact,favorite.item.name,favorite.item.name)">
+                              <span class="glyphicon glyphicon-envelope"></span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+                
+                 
+            </div>
+        </div>
+

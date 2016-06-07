@@ -1,0 +1,50 @@
+<div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   <li class="active">My ads</li>
+               </ul>
+            </div>
+            <div class="col-xs-12">
+               <h3>My ads</h3>
+               <hr>
+            </div>
+        </div>
+        <div class="row row-content">
+            <div class="col-xs-12" ng-if="!showItem">
+                <h3>{{message}}</h3>
+            </div>
+            
+            <div  ng-if="showItem">
+            <div ng-repeat="item in items" class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="card card-block">
+                    <!--
+                    <img class="media-object img-thumbnail" ng-src={{item.image}} alt="{{item.name}}">
+                    -->
+                    
+                      <h4 class="card-title">{{item.name}}</h4>
+                      <p class="card-text">Description: {{item.descr}}</p>
+                      <p class="card-text">Size: {{item.size}}</p>
+                      <p class="card-text">Type: {{item.type}}</p>
+                      <p class="card-text">State: {{item.state}}</p>
+                      <p class"card-text">State: {{item.category}}</p>
+                      <div class="extra content">
+                            <a ng-click="deleteItem(item.id)">
+                               <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            
+                        </div>
+                      
+    
+                      
+                    
+                </div>
+                
+                   </div> 
+            </div>
+            
+           
+        </div>
+
+    </div>

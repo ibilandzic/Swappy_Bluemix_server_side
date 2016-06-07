@@ -1,0 +1,22 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "images": {
+    "name": "images",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./client/"
+  },
+  "cloudant": {
+    "host": "83c0aeee-3002-4d78-b04e-495380c8226e-bluemix.cloudant.com",
+    "port": 443,
+    "url": "https://83c0aeee-3002-4d78-b04e-495380c8226e-bluemix:c6d5c8174acb13676fbf049797f1b55ee8f3c512d5c563999337149fc07e3f8a@83c0aeee-3002-4d78-b04e-495380c8226e-bluemix.cloudant.com",
+    "database": "swappy",
+    "username": "83c0aeee-3002-4d78-b04e-495380c8226e-bluemix",
+    "password": "c6d5c8174acb13676fbf049797f1b55ee8f3c512d5c563999337149fc07e3f8a",
+    "name": "cloudant",
+    "connector": "cloudant"
+  }
+}

@@ -1,0 +1,95 @@
+<div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   
+                   <li class="active">New Ad</li>
+               </ul>
+            </div>
+            <div class="col-xs-12">
+               <h3>Post new ad</h3>
+               <hr>
+            </div>
+        </div>
+        
+        <div class="row row-content">
+            
+            <div class="col-xs-12" ng-if="!showForm">
+                <h3>{{message}}</h3>
+            </div>
+        
+            <div class="col-xs-12 col-sm-9 col-lg-6" ng-if="showForm">
+                    
+                <form class="form-horizontal" name="itemForm" ng-submit="submitItem()" novalidate>
+                    <div class="form-group">
+                    <label class="sr-only" for="name">Item name</label>
+                    <input type="text" class="form-control input-sm" id="name" placeholder="Item name" ng-model="newItem.name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="sr-only" for="descr">Item description</label>
+                        <textarea class="form-control" rows="12" name="descr" id="descr"
+                                ng-model="newItem.descr" placeholder="Describe item" required>
+                            </textarea>
+                    </div>
+                    
+                    
+                     <div class="form-group">
+                        <label class="sr-only" for="type">Item type</label>
+                        <select type="text" id="type" ng-model="newItem.type" name="type" required>
+                         
+                                  <option ng-repeat="type in allTypes" value="{{type.name}}">{{type.name}}</option>
+                            </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="sr-only" for="size">Item size</label>
+                        <select type="text" id="size" ng-model="newItem.size" required>
+                            <!--
+                              <option value="XS">Extra Small</option>
+                              <option value="S">Small</option>
+                              <option value="M">Medium</option>
+                              <option value="L">Large</option>
+                              <option value="XL">Extra Large</option>
+                              <option value="2XL">Double Extra Large</option>
+                              -->
+                              <option ng-repeat="size in allSizes" value="{{size.region}} {{size.value}}">{{size.region}} {{size.value}}</option>
+                            </select>
+                    </div>
+                  
+                  <div class="form-group">
+                        <label class="sr-only" for="state">Item for</label>
+                            <select type="text" id="state" ng-model="newItem.state" required>
+                              <option value="Bad">Bad</option>
+                              <option value="Good">Good</option>
+                              <option value="Like new">Like new</option>
+                              <option value="Unworn">Unworn</option>
+                            </select>
+                    </div>
+                  
+                    
+                    <div class="form-group">
+                        <label class="sr-only" for="gender">Item for</label>
+                            <select type="text" id="gender" ng-model="newItem.gender" required>
+                              <option value="Female">Female</option>
+                              <option value="Male">Male</option>
+                            </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="sr-only" for="category">Item category</label>
+                            <select type="text" id="category" ng-model="newItem.category" required>
+                              <option value="Woman">Woman</option>
+                              <option value="Man">Man</option>
+                              <option value="Girls">Girls</option>
+                              <option value="Boys">Boys</option>
+                            </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-info btn-block">Post new ad</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
